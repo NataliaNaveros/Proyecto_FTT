@@ -134,7 +134,7 @@
                         <span style="color: #FFFFFF">Formulario de contacto</span>
                     </td>
                     <td>
-                        <span style="color: #FFFFFF"><i class="fa fa-facebook-square"></i>Facebook</span>
+                        <span style="color: #FFFFFF"><i class="fab fa-facebook-square"></i> Facebook</span>
                     </td>
                 </tr>
                 <tr style="font-size:20px">
@@ -145,7 +145,7 @@
                         <span style="color: #FFFFFF">Quejas y reclamos</span>
                     </td>
                     <td>
-                        <span style="color: #FFFFFF"><i class="fa fa-twitter-square"></i>Twitter</span>
+                        <span style="color: #FFFFFF"><i class="fab fa-twitter-square"></i> Twitter</span>
                     </td>
                 </tr>
             </table>
