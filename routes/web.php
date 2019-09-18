@@ -18,7 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('auth/login','Auth\LoginController@getLogin');
-
+Route::get('login','Auth\LoginController@showLoginForm')->name('login');
+Route::get('register','Auth\RegisterController@showRegistrationForm')->name('register');
+/*Route::get('password/reset','Auth\ForgotPasswordController@showLinkRequestForm');
+Route::get('password/reset/{token}','Auth\ResetPasswordController@showResetForm');*/
 Route::resource('admin', 'AdminController');
 
