@@ -23,4 +23,11 @@ Route::get('register','Auth\RegisterController@showRegistrationForm')->name('reg
 /*Route::get('password/reset','Auth\ForgotPasswordController@showLinkRequestForm');
 Route::get('password/reset/{token}','Auth\ResetPasswordController@showResetForm');*/
 Route::resource('admin', 'AdminController');
+Route::get('rutas','RutasController@index')->name('rutas');
+Route::get('armenia','ArmeniaController@index')->name('armenia');
+Route::get('cali','CaliController@index')->name('cali');
+Route::get('cartago','CartagoController@index')->name('cartago');
+Route::get('bolivar','BolivarController@index')->name('bolivar');
+Route::get('buga','BugaController@index')->name('buga');
+Route::get('pereira','PereiraController@index')->name('pereira');
 

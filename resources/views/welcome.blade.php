@@ -72,87 +72,115 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref">
-            @if (Route::has('login'))
-                <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Iniciar Sesi&oacute;n</a>
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}">Registrar</a>
-            @endif
-            @endauth
-            </div>
-            @endif
-        </div>
-       <div class="content" id="fondo">
-           <div class="title m-b-md" style="color: #FFFFFF; font-weight: bold">
-               <span>Viaja Seguro <i class="fas fa-bus-alt"></i></span>
-            </div>
-       </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 jumbotron" style="margin: 0 85px 0 10px;">
-                    <img class="img-responsive" src="{{asset('img/gps.jpg')}}" id="foto">
-                    <p style="text-align: center;"><a style="text-decoration: none;color: black;">RUTAS</a></p>
-                    <p style="text-align: center;"><a class="btn btn-warning btn-lg" href="#">Ver M&aacute;s</a></p>
+    <div>
+        @if (Route::has('login'))
+            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+                <a class="navbar-brand" href="#">Proyecto FTT</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarColor02">
+                    @auth
+                        <a style="color: white; padding: 5px 10px 3px; margin: 5px;" href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a style="color: white; padding: 5px 10px 3px; margin: 5px;" href="{{ route('login') }}" style="tab-size: inherit">Iniciar Sesi&oacute;n</a>
+                        @if (Route::has('register'))
+                            <a style="color: white; padding: 5px 10px 3px; margin: 5px;" href="{{ route('register') }}">Registrar</a>
+                        @endif
+                    @endauth
                 </div>
-                <div class="col-md-3 jumbotron" style="margin: 0 85px 0 10px;">
-                    <img class="img-responsive" src="{{asset('img/bus.jpg')}}" id="foto">
-                    <p style="text-align: center;"><a style="text-decoration: none; color: black">BUSES</a></p>
-                    <p style="text-align: center;"><a class="btn btn-warning btn-lg" href="#">Ver M&aacute;s</a></p>
-                </div>
-                <div class="col-md-3 jumbotron" style="margin: 0 85px 0 10px;">
-                    <img class="img-responsive" src="{{asset('img/ticket.jpg')}}" id="foto">
-                    <p style="text-align: center;"><a style="text-decoration: none; color: black">COMPRA DE TICKET</a></p>
-                    <p style="text-align: center;"><a class="btn btn-warning btn-lg" href="#">Ver M&aacute;s</a></p>
-                </div>
-            </div>
-        </div>
-        <div class=" jumbotron" id="fondo2">
-            <img src="{{asset('img/mascotas.jpg')}}" style="width: 100%">
-        </div>
-        <div class=" jumbotron" id="fondo3">
-            <table style="width: 100%; margin-left: 35px;">
-                <tr style="font-size: 30px; font-weight: bold" >
-                    <td>
-                        <span style="color: #C91409">Nuestra Cooperativa</span>
-                    </td>
-                    <td>
-                        <span style="color: #C91409">Servicio al cliente</span>
-                    </td>
-                    <td>
-                        <span style="color: #C91409">Redes Sociales</span>
-                    </td>
-                </tr>
-                <tr style="font-size: 20px">
-                    <td>
-                        <span style="color: #FFFFFF">Conocenos</span>
-                    </td>
-                    <td>
-                        <span style="color: #FFFFFF">Formulario de contacto</span>
-                    </td>
-                    <td>
-                        <span style="color: #FFFFFF"><i class="fab fa-facebook-square"></i> Facebook</span>
-                    </td>
-                </tr>
-                <tr style="font-size:20px">
-                    <td>
-                        <span style="color: #FFFFFF">Contrato de transporte de pasajeros</span>
-                    </td>
-                    <td>
-                        <span style="color: #FFFFFF">Quejas y reclamos</span>
-                    </td>
-                    <td>
-                        <span style="color: #FFFFFF"><i class="fab fa-twitter-square"></i> Twitter</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            </nav>
+        @endif
+    </div>
+    <div class="jumbotron bg-secondary">
+        <h1 class="display-3" style="font-style: inherit;font-weight: bold;text-align: center"><span>Viaja Seguro <i class="fas fa-bus-alt"></i></span></h1>
+    </div>
+    <div class=" jumbotron bg-danger">
+        <table width="100%" style="font-style: inherit;font-weight: bold; color: #FFFFFF; text-align: center; text-decoration: none">
+            <tr>
+                <td width="33%">
+
+                    <img class="rounded mx-auto d-block" src="{{asset('img/gps.jpg')}}" id="foto" style="" align="center">
+                </td>
+                <td width="34%">
+                    <img class="rounded mx-auto d-block" src="{{asset('img/bus.jpg')}}" id="foto">
+
+                </td>
+                <td width="33%">
+                    <img class="rounded mx-auto d-block" src="{{asset('img/ticket.jpg')}}" id="foto">
+
+                </td>
+            </tr>
+            <tr style="font-size: 20px">
+                <td>
+                    <p><a>RUTAS</a></p>
+
+                </td>
+                <td>
+                    <p><a>BUSES</a></p>
+
+                </td>
+                <td>
+                    <p><a>COMPRA DE TICKET</a></p>
+
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td>
+                    <p style="text-align: center;"><a class="btn btn-info btn-lg" href="{{route('rutas')}}">Ver M&aacute;s</a></p>
+                </td>
+                <td>
+                    <p style="text-align: center;"><a class="btn btn-info btn-lg" href="#">Ver M&aacute;s</a></p>
+                </td>
+                <td>
+                    <p style="text-align: center;"><a class="btn btn-info btn-lg" href="#">Ver M&aacute;s</a></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 
 
-
+    <div class="jumbotron">
+        <!--<h1 class="display-3" style="font-style: inherit;font-weight: bold;text-align: center"><span>Viaja Seguro <i class="fas fa-bus-alt"></i></span></h1>-->
+        <img src="{{asset('img/mascotas.jpg')}}" style="width: 100%">
+    </div>
+    <div class=" jumbotron bg-danger">
+        <table style="width: 100%; margin-left: 35px;color: #FFFFFF">
+            <tr style="font-size: 30px; font-weight: bold" >
+                <td>
+                    <span>Nuestra Cooperativa</span>
+                </td>
+                <td>
+                    <span>Servicio al cliente</span>
+                </td>
+                <td>
+                    <span>Redes Sociales</span>
+                </td>
+            </tr>
+            <tr style="font-size: 20px">
+                <td>
+                    <span>Conocenos</span>
+                </td>
+                <td>
+                    <span>Formulario de contacto</span>
+                </td>
+                <td>
+                    <span><i class="fab fa-facebook-square"></i> Facebook</span>
+                </td>
+            </tr>
+            <tr style="font-size:20px">
+                <td>
+                    <span>Contrato de transporte de pasajeros</span>
+                </td>
+                <td>
+                    <span>Quejas y reclamos</span>
+                </td>
+                <td>
+                    <span><i class="fab fa-twitter-square"></i> Twitter</span>
+                </td>
+            </tr>
+        </table>
+    </div>
         <!--JQuery-->
         <script src="{{asset('js/jquery.min.js')}}"></script>
         <!-- Bootstrap -->
