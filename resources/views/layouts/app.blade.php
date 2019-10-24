@@ -24,6 +24,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        body{
+            width: 100%
+        }
+    </style>
 </head>
 <body>
 <div>
