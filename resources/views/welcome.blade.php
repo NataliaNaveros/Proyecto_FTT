@@ -130,7 +130,7 @@
                     <p style="text-align: center;"><a class="btn btn-info btn-lg" href="{{route('rutas')}}">Ver M&aacute;s</a></p>
                 </td>
                 <td>
-                    <p style="text-align: center;"><a class="btn btn-info btn-lg" href="#">Ver M&aacute;s</a></p>
+                    <p style="text-align: center;"><a class="btn btn-info btn-lg" href="{{route('buses')}}">Ver M&aacute;s</a></p>
                 </td>
                 <td>
                     <p style="text-align: center;"><a class="btn btn-info btn-lg" href="#">Ver M&aacute;s</a></p>

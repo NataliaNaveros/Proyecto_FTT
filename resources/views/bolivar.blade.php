@@ -5,7 +5,7 @@
 	<div class="col-md-7">
 		<div class="card-header text-center">BOLIVAR</div>
 		<div style="font-family: inherit;">
-			<h4 style="font-weight: bold;">¿Qué hay para hacer en Armenia?</h4>
+			<h4 style="font-weight: bold;">¿Qué hay para hacer en Bolivar?</h4>
 			<img class="col-md-12" src="{{asset('img/bolivar_turismo.jpg')}}">
 			<p>En Bolívar Son muy conocidos y frecuentados sus balnearios naturales</p>
 			<ul>

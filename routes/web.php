@@ -30,4 +30,5 @@ Route::get('cartago','CartagoController@index')->name('cartago');
 Route::get('bolivar','BolivarController@index')->name('bolivar');
 Route::get('buga','BugaController@index')->name('buga');
 Route::get('pereira','PereiraController@index')->name('pereira');
-
+Route::get('pereira','PereiraController@index')->name('pereira');
+Route::get('buses','BusesController@index')->name('buses');

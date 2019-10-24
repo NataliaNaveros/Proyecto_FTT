@@ -3,45 +3,55 @@
 @section('content')
 <div class="container row" style="padding: 0 auto 0 auto; margin: 0 auto 0 auto">
 	<div class="col-md-7">
-		<div class="card-header text-center">ARMENIA</div>
+		<div class="card-header text-center">PEREIRA</div>
 		<div style="font-family: inherit;">
-			<h4 style="font-weight: bold;">¿Qué hay para hacer en Armenia?</h4>
-			<img class="col-md-12" src="{{asset('img/armenia_turismo.jpg')}}">
+			<h4 style="font-weight: bold;">¿Qué hay para hacer en Pereira?</h4>
+			<img class="col-md-12" src="{{asset('img/pereira_turismo.jpg')}}">
 			<p style="font-weight: bold; display: inline;">Clima:</p>
-			<p style="display: inline;"> Tropical –  18° 28° C</p><br>
-			<p style="font-weight: bold;display: inline;">Gentilicio:</p>
+			<p style="display: inline;"> 15° – 26° C</p><br>
+			<p style="font-weight: bold;display: inline;">Pereirano-a</p>
 			<p style="display: inline;">Cuyabro, Armenio, -a</p><br>
 			<p style="font-weight: bold;display: inline;">Comida típica:</p>
-			<p style="text-align: justify-all;">
-				La mazamorra de maíz endulzada con panela o la aguapanela con queso son bebidas típicas. Las arepas de maíz con queso, los buñuelos con natilla, las solteritas, las obleas con crema de leche, los esponjados de fresa y Guanábana y las brevas con queso.
-				En la ciudad de Armenia, se pueden encontrar una gran variedad de espacios para compartir en familia como parques, sus calles, centros comerciales, donde se disfruta de un ambiente tranquilo y seguro, contemplando sus hermosas calles o respirando el aire puro que ofrecen sus parques.
+			<p style="text-align: justify;">
+				El maíz y el fríjol son importantes en la cocina de Pereira y sus alrededores. Se destaca la bandeja paisa, conocida también como típico montañero y cuya receta original tiene quince ingredientes.
+				Pereira, capital del departamento de Risaralda. Es la ciudad más poblada de la región del eje cafetero. Por estar en el centro del Triángulo de oro (Bogotá, Medellín y Cali), ha cobrado gran relevancia, especialmente en el ámbito del comercio.
+				En lo turístico, desde el Parque Temático Ukumarí hasta la Laguna del Otún, o el Nevado de Santa Isabel, todos ubicados dentro del municipio, ofrecen escenarios para actividades que van desde el deporte de aventura al ecoturismo. Pereira también es conocida por su vida nocturna, debido a sus bares y discotecas.
 			</p>
 			<h4 style="font-weight: bold;">Sitios Tur&iacute;sticos</h4>
 			<ul>
-				<li>Comercial de Cielos Abiertos</li>
-				<li>El Parque Sucre</li>
-				<li>La Plaza de Bolívar</li>
-				<li>El Parque de los Fundadores</li>
-				<li>El Museo del Oro Quimbaya</li>
-				<li>El Coliseo del Café El Parque de la Vida</li>
+				<li>Bioparque Ukumar&iacute;</li>
+				<li>Termales de Santa Rosa de Cabal</li>
+				<li>Ecoparque La granja de No&eacute;</li>
+				<li>El Jard&iacute;n Botánico de Marsella</li>
+				<li>Parque Nacional los Nevados</li>
+				<li>Laguna del Ot&uacute;n</li>
+				<li>Reserva Ucumari</li>
+				<li>Turismo Ejecutivo</li>
+				<li>Centro Cultural Lucy Tejada</li>
+				<li>Parque Lineal Egoy&aacute;</li>
+				<li>Plaza C&iacute;vica Ciudad Victoria </li>
+				<li>El Viaducto César Gaviria Trujillo</li>
 			</ul>
 			<h4 style="font-weight: bold;">Ferias y Fiestas</h4>
-			<p style="text-align: justify;">
-				Las Fiestas Cuyabras que tienen lugar cada año en Armenia ofrecen una programación que incluye verbenas populares, concurso de duetos, desfile del yipao (los jeep Willys que suben por las montañas del departamento), la elección de la reina chapolera y exposición de artesanías, entre otras cosas 
-			</p>
+			<ul>
+				<li>Semana Santa en Pereira</li>
+				<li>Fiestas de la Cosecha en Agosto</li>
+				<li>Festival del Despecho</li>
+			</ul>
 			<h4 style="font-weight: bold;">Hoteles</h4>
 			<ul>
-				<li>Hotel Centenario</li>
-				<li>Hotel Allure AromaMocawa</li>
-				<li>Hotel Bolivar Plaza</li>
-				<li>La Floresta Hotel</li>
+				<li>Movich Hotel de Pereira</li>
+				<li>Hotel Castilla Real</li>
+				<li>Luxor Plaza Hotel</li>
+				<li>Luxor Condina Hotel</li>
 			</ul>
 			<h4 style="font-weight: bold;">Restaurantes</h4>
 			<ul>
-				<li>La Fogata</li>
-				<li>Darpapaya</li>
-				<li>Café Quindío</li>
-				<li>Restaurante El Roble</li>
+				<li>Kilaba</li>
+				<li>La Trattoría</li>
+				<li>El Mesón Español</li>
+				<li>Hispania</li>
+				<li>Maria La Mexicana Restaurante</li>
 			</ul>
 		</div>
 		
@@ -72,12 +82,12 @@
 				</tr>
 				<tr class="table-warning">
 					<th scope="row">
-						<a class="text-left" href="{{route('pereira')}}" style="text-decoration: none;color: #000">CONOCE M&Aacute;S</a>
+						<a class="text-left" href="{{route('armenia')}}" style="text-decoration: none;color: #000">CONOCE M&Aacute;S</a>
 					</th>
 				</tr>
 				<tr class="table-danger">
 					<th scope="row">
-						<img class="rounded mx-auto d-block" src="{{asset('img/pereira.png')}}" style="width: 275px; height: 150px">
+						<img class="rounded mx-auto d-block" src="{{asset('img/armenia.png')}}" style="width: 275px; height: 150px">
 					</th>
 				</tr>
 				<tr class="table-warning">
