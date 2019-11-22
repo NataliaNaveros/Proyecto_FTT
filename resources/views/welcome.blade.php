@@ -142,10 +142,13 @@
 
     <div class="jumbotron">
         <!--<h1 class="display-3" style="font-style: inherit;font-weight: bold;text-align: center"><span>Viaja Seguro <i class="fas fa-bus-alt"></i></span></h1>-->
-        <img src="{{asset('img/mascotas.jpg')}}" style="width: 100%">
+        <img src="{{asset('img/mascotas.jpg')}}" style="width: 100%" >
+        <div class="d-flex justify-content-end">
+            <a href="{{route('mascota')}}" class="btn btn-info">Más Información</a>
+        </div>
     </div>
     <div class=" jumbotron bg-danger">
-        <table style="width: 100%; margin-left: 35px;color: #FFFFFF">
+        <table style="width: 98%; margin-left: 35px;color: #FFFFFF">
             <tr style="font-size: 30px; font-weight: bold" >
                 <td>
                     <span>Nuestra Cooperativa</span>
@@ -159,24 +162,24 @@
             </tr>
             <tr style="font-size: 20px">
                 <td>
-                    <span>Conocenos</span>
+                    <a href="{{route('conocenos')}}" style="text-decoration: none; color: #FFF"><span>Conocenos</span></a>
                 </td>
                 <td>
-                    <span>Formulario de contacto</span>
+                    <a href="{{route('contacto')}}" style="text-decoration: none; color: #FFF"><span>Formulario de contacto</span></a>
                 </td>
                 <td>
-                    <span><i class="fab fa-facebook-square"></i> Facebook</span>
+                    <a href="https://www.facebook.com" style="text-decoration: none; color: #FFF"><span><i class="fab fa-facebook-square"></i> Facebook</span></a>
                 </td>
             </tr>
             <tr style="font-size:20px">
                 <td>
-                    <span>Contrato de transporte de pasajeros</span>
+                    <a href="{{route('guia')}}" style="text-decoration: none; color: #FFF"><span>Guia de transporte de pasajeros</span></a>
                 </td>
                 <td>
-                    <span>Quejas y reclamos</span>
+                    <span>Telefono: 323 4567</span>
                 </td>
                 <td>
-                    <span><i class="fab fa-twitter-square"></i> Twitter</span>
+                    <a href="https://www.twitter.com" style="text-decoration: none; color: #FFF"><span><i class="fab fa-twitter-square"></i> Twitter</span></a>
                 </td>
             </tr>
         </table>

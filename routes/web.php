@@ -32,3 +32,8 @@ Route::get('buga','BugaController@index')->name('buga');
 Route::get('pereira','PereiraController@index')->name('pereira');
 Route::get('pereira','PereiraController@index')->name('pereira');
 Route::get('buses','BusesController@index')->name('buses');
+Route::get('guia','GuiaController@index')->name('guia');
+Route::get('contacto','ContactoController@index')->name('contacto');
+Route::post('informacion', 'ContactoController@store')->name('informacion');
+Route::get('conocenos','ConocenosController@index')->name('conocenos');
+Route::get('mascota','MascotaController@index')->name('mascota');
