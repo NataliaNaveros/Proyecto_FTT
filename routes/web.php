@@ -37,3 +37,31 @@ Route::get('contacto','ContactoController@index')->name('contacto');
 Route::post('informacion', 'ContactoController@store')->name('informacion');
 Route::get('conocenos','ConocenosController@index')->name('conocenos');
 Route::get('mascota','MascotaController@index')->name('mascota');
+
+Route::get('notificaciones','ContactoController@show')->name('notificaciones');
+route::get('notificacion/eliminar/{id}','ContactoController@destroy');
+
+Route::get('comprar','ComprarController@index')->name('compra');
+Route::get('usuario','UsuarioController@index')->name('usuario');
+#Condutores
+Route::get('conductores','ConductorController@index')->name('conductores');
+Route::get('conductores/create', 'ConductorController@create')->name('create');
+Route::post('conductores/crear', 'ConductorController@store')->name('crear');
+Route::get('conductores/edit/{id}','ConductorController@edit')->name('editar');
+Route::put('conductores/actualizar/{id}','ConductorController@update')->name('actulizar');
+route::get('conductores/eliminar/{id}','ConductorController@destroy');
+#Bus
+Route::get('bus','BusController@index')->name('bus');
+Route::get('bus/create', 'BusController@create')->name('bus_create');
+Route::post('bus/crear', 'BusController@store')->name('bus_crear');
+Route::get('bus/edit/{id}','BusController@edit')->name('bus_editar');
+Route::put('bus/actualizar/{id}','BusController@update')->name('bus_actulizar');
+route::get('bus/eliminar/{id}','BusController@destroy');
+
+#Bus
+Route::get('ruta','RutaController@index')->name('ruta');
+Route::get('ruta/create', 'RutaController@create')->name('ruta_create');
+Route::post('ruta/crear', 'RutaController@store')->name('ruta_crear');
+Route::get('ruta/edit/{id}','RutaController@edit')->name('ruta_editar');
+Route::put('ruta/actualizar/{id}','RutaController@update')->name('ruta_actulizar');
+route::get('ruta/eliminar/{id}','RutaController@destroy');

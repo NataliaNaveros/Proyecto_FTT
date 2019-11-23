@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
-use App\Contacto;
+use App\Conductor;
 
-class ContactoController extends Controller
+class ConductorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,8 @@ class ContactoController extends Controller
     public function index()
     {
         //
-        #$contacto = App\Contacto::all();
-        #return view('contacto',compact($contacto));
-        return view('contacto');
-
+        $conductor = Conductor::all();
+        return view('conductores.index', compact('conductor'));
     }
 
     /**
@@ -30,7 +27,7 @@ class ContactoController extends Controller
     public function create()
     {
         //
-        return view ('contacto.create');
+        return view ('conductores.create');
     }
 
     /**
@@ -42,14 +39,14 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         //
-        $contacto = new Contacto;
-        $contacto->nombre = $request->nombre;
-        $contacto->email = $request->email;
-        $contacto->telefono = $request->telefono;
-        $contacto->mensaje = $request->mensaje;
-        $contacto->save();
-        return back()->with('contacto', 'El mensaje fue enviado con exito');
-        
+        $conductor = new Conductor;
+        $conductor->nombre = $request->nombre;
+        $conductor->apellido = $request->apellido;
+        $conductor->cedula = $request->cedula;
+        $conductor->telefono = $request->telefono;
+        $conductor->email = $request->email;
+        $conductor->save();
+        return back()->with('conductores.index');
     }
 
     /**
@@ -58,11 +55,10 @@ class ContactoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
-        $contacto = Contacto::all();
-        return view('notificaciones', compact('contacto'));
+        
     }
 
     /**
@@ -74,6 +70,8 @@ class ContactoController extends Controller
     public function edit($id)
     {
         //
+        $conductor = Conductor::findOrFail($id);
+        return view('conductores.edit', compact('conductor'));
     }
 
     /**
@@ -86,6 +84,14 @@ class ContactoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $conductor= Conductor::findOrFail($id);
+        $conductor->nombre = $request->nombre;
+        $conductor->apellido = $request->apellido;
+        $conductor->cedula = $request->cedula;
+        $conductor->telefono = $request->telefono;
+        $conductor->email = $request->email;
+        $conductor->save();
+        return back()->with('conductores.update');
     }
 
     /**
@@ -97,8 +103,9 @@ class ContactoController extends Controller
     public function destroy($id)
     {
         //
-        Contacto::destroy($id);
+        #$conductor= Conductor::findOrFail($id);
+        Conductor::destroy($id);
         #Alert::success('Conductor eliminado con exito');
-        return redirect('notificaciones');
+        return redirect('conductores');
     }
 }

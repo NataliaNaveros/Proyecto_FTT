@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
-use App\Contacto;
+use App\Ruta;
 
-class ContactoController extends Controller
+class RutaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,8 @@ class ContactoController extends Controller
     public function index()
     {
         //
-        #$contacto = App\Contacto::all();
-        #return view('contacto',compact($contacto));
-        return view('contacto');
-
+        $ruta = Ruta::all();
+        return view('rutas.index', compact('ruta'));
     }
 
     /**
@@ -30,7 +27,7 @@ class ContactoController extends Controller
     public function create()
     {
         //
-        return view ('contacto.create');
+        return view ('rutas.create');
     }
 
     /**
@@ -42,14 +39,11 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         //
-        $contacto = new Contacto;
-        $contacto->nombre = $request->nombre;
-        $contacto->email = $request->email;
-        $contacto->telefono = $request->telefono;
-        $contacto->mensaje = $request->mensaje;
-        $contacto->save();
-        return back()->with('contacto', 'El mensaje fue enviado con exito');
-        
+        $ruta = new Ruta;
+        $ruta->nombre = $request->nombre;
+        $ruta->distancia = $request->distancia;
+        $ruta->save();
+        return back()->with('rutas.index');
     }
 
     /**
@@ -58,11 +52,10 @@ class ContactoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
-        $contacto = Contacto::all();
-        return view('notificaciones', compact('contacto'));
+        
     }
 
     /**
@@ -74,6 +67,8 @@ class ContactoController extends Controller
     public function edit($id)
     {
         //
+        $ruta = Ruta::findOrFail($id);
+        return view('rutas.edit', compact('ruta'));
     }
 
     /**
@@ -86,6 +81,11 @@ class ContactoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $ruta= Ruta::findOrFail($id);
+        $ruta->nombre = $request->nombre;
+        $ruta->distancia = $request->distancia;
+        $ruta->save();
+        return back()->with('rutas.update');
     }
 
     /**
@@ -97,8 +97,8 @@ class ContactoController extends Controller
     public function destroy($id)
     {
         //
-        Contacto::destroy($id);
+        Ruta::destroy($id);
         #Alert::success('Conductor eliminado con exito');
-        return redirect('notificaciones');
+        return redirect('ruta');
     }
 }

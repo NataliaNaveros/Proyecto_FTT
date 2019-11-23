@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
-use App\Contacto;
+use App\Bus;
 
-class ContactoController extends Controller
+
+class BusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,8 @@ class ContactoController extends Controller
     public function index()
     {
         //
-        #$contacto = App\Contacto::all();
-        #return view('contacto',compact($contacto));
-        return view('contacto');
-
+        $bus = Bus::all();
+        return view('buses.index', compact('bus'));
     }
 
     /**
@@ -30,7 +28,7 @@ class ContactoController extends Controller
     public function create()
     {
         //
-        return view ('contacto.create');
+        return view ('buses.create');
     }
 
     /**
@@ -42,14 +40,13 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         //
-        $contacto = new Contacto;
-        $contacto->nombre = $request->nombre;
-        $contacto->email = $request->email;
-        $contacto->telefono = $request->telefono;
-        $contacto->mensaje = $request->mensaje;
-        $contacto->save();
-        return back()->with('contacto', 'El mensaje fue enviado con exito');
-        
+        $bus = new Bus;
+        $bus->tipo = $request->tipo;
+        $bus->marca = $request->marca;
+        $bus->placa = $request->placa;
+        $bus->capacidad = $request->capacidad;
+        $bus->save();
+        return back()->with('buses.index');
     }
 
     /**
@@ -58,11 +55,9 @@ class ContactoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
         //
-        $contacto = Contacto::all();
-        return view('notificaciones', compact('contacto'));
     }
 
     /**
@@ -73,7 +68,8 @@ class ContactoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bus = Bus::findOrFail($id);
+        return view('buses.edit', compact('bus'));
     }
 
     /**
@@ -86,6 +82,13 @@ class ContactoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $bus= Bus::findOrFail($id);
+        $bus->tipo = $request->tipo;
+        $bus->marca = $request->marca;
+        $bus->placa = $request->placa;
+        $bus->capacidad = $request->capacidad;
+        $bus->save();
+        return back()->with('buses.update');
     }
 
     /**
@@ -97,8 +100,8 @@ class ContactoController extends Controller
     public function destroy($id)
     {
         //
-        Contacto::destroy($id);
+        Bus::destroy($id);
         #Alert::success('Conductor eliminado con exito');
-        return redirect('notificaciones');
+        return redirect('bus');
     }
 }
